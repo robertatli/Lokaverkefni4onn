@@ -41,6 +41,12 @@ h2{
 	color: black;
 }
 .venue{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+	max-width: 138px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	-ms-text-overflow: ellipsis;
@@ -48,6 +54,29 @@ h2{
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #969696;
+	float: left;
+}
+.venue:hover{
+	max-width: 285px;
+}
+.venue:hover ~ .dateVenue{
+	max-width: 0px;
+}
+.dateVenue{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+	max-width: 146px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #969696;
+	float: right;
 }
 /*---------BASE VALUES----------*/
 .img img{

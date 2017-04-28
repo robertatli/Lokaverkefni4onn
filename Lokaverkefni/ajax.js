@@ -16,8 +16,16 @@ $.ajax({
         "</h2>"+
       "<div class='venue' id='venue'>"+
       response.results[i].eventHallName+
-      "</div></div>"
+      "</div><div class='dateVenue'>"+
+      moment.utc(response.results[i].dateOfShow).format('LLL');
+      moment.locale('is');
+      +"</div></div>"
     }
+
+
+
+
+// img tags filter ------------------------ //
 
     (function() { // þarf að laga
 
