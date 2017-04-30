@@ -10,10 +10,12 @@ div{
     width: 100%;
     max-width: 1300px;
 }
-.img{
+#img{
 	float: left;
 	margin:20px 20px 0px 20px;
 }
+
+
 a{
 	text-decoration: none;
 }
@@ -68,7 +70,7 @@ h2{
 	-o-transition: all 1s ease;
 	-ms-transition: all 1s ease;
 	transition: all 1s ease;
-	max-width: 146px;
+	max-width: 200px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	-ms-text-overflow: ellipsis;
@@ -79,23 +81,16 @@ h2{
 	float: right;
 }
 /*---------BASE VALUES----------*/
-.img img{
+#img img{
 
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	transition: all 1s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 	opacity: 1;
 }
 
-.img:hover img{
-
-	-webkit-filter:blur(2px);
-	-webkit-transform: scale(0.98);
-    -moz-transform: scale(0.98);
-    -ms-transform: scale(0.98);
-    -o-transform: scale(0.98);
-    transform: scale(0.98);
+#img:hover img{
     opacity: 0.5;
 }
