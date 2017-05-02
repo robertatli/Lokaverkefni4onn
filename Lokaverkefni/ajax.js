@@ -3,27 +3,24 @@ $.ajax({
   'type': 'GET',
   'dataType': 'json',
   'success': function(response) {
-	for (var i = 0; i <= response.results.length; i++) {
+	for (var i = 0; i <= response.results.length-1; i++) {
     	document.getElementById('images').innerHTML +=
-      "<div id='img'>"+
+      "<div id='img' data-tags='"+
+        response.results[i].eventHallName+"'>"+
         "<img src='"+
         response.results[i].imageSource+
-        "' data-tags='"+
-        response.results[i].eventHallName+
         "'><h2>"+
         response.results[i].eventDateName+
         "</h2>"+
       "<div class='venue' id='venue'>"+
       response.results[i].eventHallName+
-      "</div><div class='dateVenue'>| "+
+      "</div><div class='dateVenue'>"+
       moment.utc(response.results[i].dateOfShow).format('LLL');
       moment.locale('is');
-      +"</div></div>"
-    }
+      +"</div></div>";
+    } //  end for loop
 
-(function() { // runnar á sama tíma og $.ajax og virkar því ekki, meiri upplýsingar neðar
-
-  var $imgs = $('#images div img');
+  var $imgs = $('#images div');
   var $buttons = $('#buttons');
   var tagged = {};
 
@@ -39,7 +36,7 @@ $.ajax({
         tagged[tagName].push(img);
       });
     }
-  });
+  });// end $imgs.each function
 
   $('<button/>', {
     text: 'Show All',
@@ -51,7 +48,7 @@ $.ajax({
         .removeClass('active');
       $imgs.show();
     }
-  }).appendTo($buttons);
+  }).appendTo($buttons);// end show all button
 
   $.each(tagged, function(tagName) {
     $('<button/>', {
@@ -59,18 +56,16 @@ $.ajax({
       click: function() {
         $(this)
           .addClass('active')
-          .siblings()                 // Þetta á að velja öll element sem eru siblings af img
-          .removeClass('active');     // Þetta á að remova .active klasann frá siblingunum, þetta virkar ekki, removar bara img fallinu.
+          .siblings()
+          .removeClass('active');
         $imgs
           .hide()
           .filter(tagged[tagName])
           .show();
       }
     }).appendTo($buttons);
-  });
+  }); //  end $.each tagged function
 
-}());
-
-  }
+  }// end success response
 
 });// end $.ajax
