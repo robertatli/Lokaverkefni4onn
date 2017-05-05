@@ -3,9 +3,11 @@ $.ajax({
   'type': 'GET',
   'dataType': 'json',
   'success': function(response) {
+    
+    
 	for (var i = 0; i <= response.results.length-1; i++) {
     	document.getElementById('images').innerHTML +=
-      "<div id='img' data-tags='"+
+      "<a id='img' data-tags='"+
         response.results[i].eventHallName+"'>"+
         "<img src='"+
         response.results[i].imageSource+
@@ -17,10 +19,10 @@ $.ajax({
       "</div><div class='dateVenue'>"+
       moment.utc(response.results[i].dateOfShow).format('LLL');
       moment.locale('is');
-      +"</div></div>";
+      +"</div></a>";
     } //  end for loop
-
-  var $imgs = $('#images div');
+console.log(response);
+  var $imgs = $('#images a');
   var $buttons = $('#buttons');
   var tagged = {};
 

@@ -1,104 +1,63 @@
-body{
-	font-family: 'Lato',Arial,tahoma,sans-serif;
-}
-div{
-	display: block;
-}
-.buttons{
-	
-}
-.limit{
-	margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 1300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-#img{
-	float: left;
-	margin:20px 20px 0px 20px;
-}
-a{
-	text-decoration: none;
-}
-h1{
-	text-align: left;
-	white-space: nowrap;
-	font-size: 40px;
-	line-height: 24px;
-	margin: 40px 0;
-	font-weight: 900;
-	position: relative;
-	color: black;
-	text-decoration: none;
-}
-h2{
-	max-width: 285px;
-	text-align: left;
-	overflow: hidden;
-	white-space: nowrap;
-	font-size: 20px;
-	line-height: 24px;
-	margin: 0;
-	font-weight: 900;
-	position: relative;
-	color: black;
-}
-.venue{
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	transition: all 1s ease;
-	max-width: 136px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-ms-text-overflow: ellipsis;
-	white-space: nowrap;
-	font-size: 14px;
-	text-transform: uppercase;
-	color: #969696;
-	float: left;
-}
-.venue:hover{
-	max-width: 285px;
-}
-.venue:hover ~ .dateVenue{
-	max-width: 0px;
-}
-.dateVenue{
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	transition: all 1s ease;
-	max-width: 146px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-ms-text-overflow: ellipsis;
-	white-space: nowrap;
-	font-size: 14px;
-	text-transform: uppercase;
-	color: #969696;
-	float: right;
-}
-/*---------BASE VALUES----------*/
-#img img{
+@media screen and (min-width: 0.310em) and (max-width: 767px){
 
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-	opacity: 1;
+	body{
+		font-family: 'Lato',Arial,tahoma,sans-serif;
+	}
+	div{
+		display: block;
+	}	
+	.limit{
+		margin-left: auto;
+	    margin-right: auto;
+	    width: 285px;
+	    display: flex;
+	    flex-direction: column;
+	}
+	a{
+		text-decoration: none;
+
+	}
+	#img{
+		margin-bottom: 2em;
+		background-color: #e6e6e6;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		text-align: center;
+		white-space: nowrap;
+		font-size: 40px;
+		line-height: 24px;
+		margin: 40px 0;
+		font-weight: 900;
+		position: relative;
+		color: black;
+		text-decoration: none;
+	}
+	h2{
+		max-width: 285px;
+		text-align: left;
+		overflow: hidden;
+		white-space: nowrap;
+		font-size: 20px;
+		line-height: 24px;
+		margin: 0;
+		font-weight: 900;
+		position: relative;
+		color: black;
+	}
+
+} /*---------END @media min-width: 0.310em----------*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+	.limit{
+		width: 650px;
+	}
 }
-
-#img:hover img{
-    opacity: 0.5;
-}
-
-button{
-
+@media screen and (min-width: 1024px){
+	.limit{
+		width: 1015px;
+	}
 }

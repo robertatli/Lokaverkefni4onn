@@ -1,0 +1,103 @@
+@media screen and (min-width: 1.000em){
+
+	body{
+		font-family: 'Lato',Arial,tahoma,sans-serif;
+	}
+	div{
+		display: block;
+		margin-left: auto;
+	    margin-right: auto;
+	}
+	.limit{
+	    max-width: 1300px;
+	    display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	}
+	#img{
+		float: left;
+		margin:20px 20px 0px 20px;
+	}
+	a{
+		text-decoration: none;
+	}
+	h1{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		text-align: center;
+		white-space: nowrap;
+		font-size: 40px;
+		line-height: 24px;
+		margin: 40px 0;
+		font-weight: 900;
+		position: relative;
+		color: black;
+		text-decoration: none;
+	}
+	h2{
+		max-width: 285px;
+		text-align: left;
+		overflow: hidden;
+		white-space: nowrap;
+		font-size: 20px;
+		line-height: 24px;
+		margin: 0;
+		font-weight: 900;
+		position: relative;
+		color: black;
+	}
+	.venue{
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		max-width: 136px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-ms-text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #969696;
+		float: left;
+	}
+	.venue:hover{
+		max-width: 285px;
+	}
+	.venue:hover ~ .dateVenue{
+		max-width: 0px;
+	}
+	.dateVenue{
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+		max-width: 146px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-ms-text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #969696;
+		float: right;
+	}
+	/*---------BASE VALUES----------*/
+	#img img{
+
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		opacity: 1;
+	}
+
+	#img:hover img{
+	    opacity: 0.5;
+	}
+
+}  /*---------END @media min-width: 1.000em-----------*/
