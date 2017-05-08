@@ -7,8 +7,10 @@ $.ajax({
     
 	for (var i = 0; i <= response.results.length-1; i++) {
     	document.getElementById('images').innerHTML +=
-      "<a id='img' data-tags='"+
-        response.results[i].eventHallName+"'>"+
+      "<a class='img' data-tags='"+
+        response.results[i].eventHallName+
+        "' id='"+
+        response.results[i].eventDateName+"'>"+
         "<img src='"+
         response.results[i].imageSource+
         "'><h2>"+
@@ -21,7 +23,7 @@ $.ajax({
       moment.locale('is');
       +"</div></a>";
     } //  end for loop
-console.log(response);
+
   var $imgs = $('#images a');
   var $buttons = $('#buttons');
   var tagged = {};
@@ -67,6 +69,38 @@ console.log(response);
       }
     }).appendTo($buttons);
   }); //  end $.each tagged function
+
+  // -------------- LiveSearch
+
+  var $imgs = $('#images a');
+  var $search = $('#filter-search');
+  var cache = [];
+
+  $imgs.each(function() {
+    cache.push({
+      element: this,
+      text: this.id.trim().toLowerCase()
+    });
+  });
+
+  function filter() {
+    var query = this.value.trim().toLowerCase();
+    cache.forEach(function(img) {
+      var index = 0;
+
+      if (query) {
+        index = img.text.indexOf(query);
+      }
+
+      img.element.style.display = index === -1 ? 'none' : '';
+    });
+  }
+
+  if ('oninput' in $search[0]) {
+    $search.on('input', filter);
+  } else {
+    $search.on('keyup', filter);
+  }              
 
   }// end success response
 

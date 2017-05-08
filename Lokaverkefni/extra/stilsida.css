@@ -1,25 +1,17 @@
-@media screen and (min-width: 0.310em) and (max-width: 767px){
+@media screen and (min-width: 285px) and (max-width: 767px){
 
 	body{
 		font-family: 'Lato',Arial,tahoma,sans-serif;
 	}
-	div{
-		display: block;
-	}	
 	.limit{
-		margin-left: auto;
-	    margin-right: auto;
-	    width: 285px;
 	    display: flex;
 	    flex-direction: column;
 	}
 	a{
 		text-decoration: none;
-
 	}
-	#img{
+	.img{
 		margin-bottom: 2em;
-		background-color: #e6e6e6;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -48,6 +40,19 @@
 		font-weight: 900;
 		position: relative;
 		color: black;
+	}
+	input[type=text] {
+	    width: 145px;
+	    box-sizing: border-box;
+	    border: 1px solid #ccc;
+	    font-size: 15px;
+	    background-color: white;
+	    background-image: url('searchicon.png');
+	    background-size: 20px;
+	    background-position: 5px 5px; 
+	    background-repeat: no-repeat;
+	    padding: 6px 10px 6px 30px;
+	    float: right;
 	}
 
 } /*---------END @media min-width: 0.310em----------*/
